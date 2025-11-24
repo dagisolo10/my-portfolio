@@ -1,0 +1,126 @@
+#service {
+    width: 100%;
+    height: calc(200vh - 64px);
+    background-color: var(--bg-color);
+    scroll-margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#service h1 {
+    color: var(--front-text-color);
+}
+
+#service .service-boxes {
+    /* width: 100%; */
+    /* padding: 1em 4em; */
+    display: grid;
+    grid-auto-rows: 150px;
+    grid-auto-columns: 200px;
+    grid-template-areas:
+        "design opt opt"
+        "design front back"
+        "app app ux";
+    gap: 1em;
+    /* scale: .7; */
+}
+
+#service .service-boxes .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    background-color: var(--dark-text-color);
+    border-radius: 6px;
+    transition: .4s;
+}
+
+#service .service-boxes .box:hover {
+    transform: scale(1.0)translateY(0px);
+}
+
+#service .service-boxes .box h2 {
+    font-size: 100%;
+    color: var(--front-text-color);
+}
+
+#service .service-boxes .box p {
+    font-size: 80%;
+    color: var(--faded-text-color);
+    text-align: center;
+}
+
+/* #service .service-boxes .box:nth-child(1) {
+    animation: slideright forwards;
+    animation-timeline: view();
+    animation-range: 0% 50%;
+}
+
+#service .service-boxes .box:nth-child(2) {
+    animation: slideright forwards;
+    animation-timeline: view();
+    animation-range: 0% 100px;
+}
+
+#service .service-boxes .box:nth-child(3) {
+    animation: slideleft forwards;
+    animation-timeline: view();
+    animation-range: 0% 100px;
+}
+
+#service .service-boxes .box:nth-child(4) {
+    animation: slideup forwards;
+    animation-timeline: view();
+    animation-range: 0% 40%;
+}
+
+#service .service-boxes .box:nth-child(5) {
+    animation: slideleft forwards;
+    animation-timeline: view();
+    animation-range: 0% 40%;
+}
+
+#service .service-boxes .box:nth-child(6) {
+    animation: slideleft forwards;
+    animation-timeline: view();
+    animation-range: 0% 50%;
+} */
+
+
+@keyframes slideup {
+    from {
+        transform: scale(1) translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1) translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideright {
+    from {
+        transform: scale(1) translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1) translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideleft {
+    from {
+        transform: scale(1) translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1) translateX(0%);
+        opacity: 1;
+    }
+}

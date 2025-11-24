@@ -1,0 +1,122 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    padding: .5em 2em;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1em;
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+    transition: .5s;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+}
+
+header .side-bar {
+    display: none;
+    z-index: 102;
+}
+
+header.active {
+    animation: show-navbar 1.5s linear forwards;
+    animation-delay: 1.2s;
+}
+
+@keyframes show-navbar {
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+header a {
+    display: inline-block;
+    font-size: .875rem;
+    color: var(--anchor-color);
+    text-decoration: none;
+    font-weight: 500;
+    opacity: 0;
+    transition: .5s color;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+header a.active {
+    color: var(--brand-color);
+    font-weight: 600;
+}
+
+header a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+header p {
+    color: var(--text-color);
+    width: auto;
+    opacity: 0;
+    transition: .3s;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.logo {
+    margin-right: auto;
+    font-size: 2rem;
+    color: var(--brand-color);
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.logo:hover {
+    color: var(--brand-color);
+    text-decoration: none;
+}
+
+.theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.theme svg {
+    fill: var(--anchor-color);
+    transition: 1s;
+}
+
+.theme svg:hover {
+    fill: var(--secondary-color);
+}
+
+#menu-icon {
+    font-size: 1.5rem;
+    display: none;
+    cursor: pointer;
+}
+
+#close-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}

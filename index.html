@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/services.css">
+    <link rel="stylesheet" href="style/resume.css">
+    <link rel="stylesheet" href="style/contact.css">
+    <link rel="stylesheet" href="style/breakpoints.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=html" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <script src="https://kit.fontawesome.com/43ffa67e9a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Header -->
+
+    <div class="overlay"></div>
+
+    <header class="active">
+        <span href="#" class="logo">Dagmawi</span>
+
+        <i class="bx bx-menu" id="menu-icon"></i>
+        
+        <a class="top-bar active" href="#home" style="--i:1;">Home</a>
+        <a class="top-bar" href="#services" style="--i:2;">Services</a>
+        <a class="top-bar" href="#resume" style="--i:3;">Resume</a>
+        <a class="top-bar" href="#projects" style="--i:4;">Projects</a>
+        <a class="top-bar" href="#contact" style="--i:5;">Contact</a>
+        
+        <div class="side-bar">
+            <i class="bx bx-x" id="close-icon"></i>
+            <a href="#home" style="--i:1;" class="active">Home</a>
+            <a href="#services" style="--i:2;">Services</a>
+            <a href="#resume" style="--i:3;">Resume</a>
+            <a href="#projects" style="--i:4;">Projects</a>
+            <a href="#contact" style="--i:5;">Contact</a>
+        </div>
+
+        <p style="--i:7">|</p>
+
+        <button style="--i:8" onclick="toggleTheme()" class="theme">
+            <svg id="themebtn" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960"
+                width="20px" fill="#e3e3e3">
+                <path
+                    d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z" />
+            </svg>
+        </button>
+    </header>
+
+    <!-- Bars -->
+
+    <div class="bars-box active">
+        <div style="--i:6" class="bar"></div>
+        <div style="--i:5" class="bar"></div>
+        <div style="--i:4" class="bar"></div>
+        <div style="--i:3" class="bar"></div>
+        <div style="--i:2" class="bar"></div>
+        <div style="--i:1" class="bar"></div>
+    </div>
+
+    <!-- Home -->
+
+    <section class="home active">
+        <div class="home-content">
+            <h3>Hello, It's me</h3>
+            <h1>Dagmawi Solomon</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>I'm a <strong>Frontend</strong> /<strong> Backend</strong> web developer from Ethiopia with great enthusiasm on creating
+                Interactive and Responsive web applications.
+            </p>
+            <div class="social-media">
+                <a href="" style="--i:9;"><i class="fa-brands fa-github"></i></i></a>
+                <a href="" style="--i:10;"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="" style="--i:11;"><i class="fa-brands fa-upwork"></i></i></a>
+                <a href="" style="--i:12;"><i class="fa-brands fa-instagram"></i></i></a>
+            </div>
+            <button href="#" class="btn">Download CV</button>
+        </div>
+
+        <div class="home-img">
+            <img src="images/muzan.jpeg" alt="">
+        </div>
+    </section>
+
+    <!-- Sevices -->
+
+    <section class="services ">
+        <h2 class="heading">My <span>Services</span></h2>
+        <div class="services-container">
+            <div style="--i:1" class="services-box">
+                <div class="icon">
+                    <i class="bx bx-code-alt"></i>
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-arrow-right fa-2xs"></i>
+                    </div>
+                </div>
+                <h3>Web Development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div style="--i:2" class="services-box">
+                <div class="icon">
+                    <i class="bx bxs-paint"></i>
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-arrow-right fa-2xs"></i>
+                    </div>
+                </div>
+                <h3>UI/UX Design</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum assumenda doloremque perferendis perspiciatis.</p>
+            </div>
+            <div style="--i:3" class="services-box">
+                <div class="icon">
+                    <i class="bx bx-bar-chart-alt"></i>
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-arrow-right fa-2xs"></i>
+                    </div>
+                </div>
+                <h3>Graphics Design</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum assumenda doloremque perferendis.</p>
+            </div>
+            <div style="--i:4" class="services-box">
+                <div class="icon">
+                    <i class="bx bx-laptop"></i>
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-arrow-right fa-2xs"></i>
+                    </div>
+                </div>
+                <h3>SEO</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. fuga reiciendis error, omnis.</p>
+            </div>
+            <div style="--i:5" class="services-box">
+                <div class="icon">
+                    <i class="bx bx-video"></i>
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-arrow-right fa-2xs"></i>
+                    </div>
+                </div>
+                <h3>Video Editing</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum assumenda doloremque.</p>
+            </div>
+            <div style="--i:6" class="services-box">
+                <div class="icon">
+                    <i class="bx bx-camera"></i>
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-arrow-right fa-2xs"></i>
+                    </div>
+                </div>
+                <h3>Photography</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum assumenda doloremque perferendis.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume -->
+
+    <section class="resume ">
+        <div class="resume-container">
+            <div class="resume-box">
+                <h2>Why Hire Me?</h2>
+                <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure vero quaerat veniam fugiat rerum accusamus?</p>
+                <button style="--i:1" class="resume-btn active">Experience</button>
+                <button style="--i:2" class="resume-btn">Education</button>
+                <button style="--i:3" class="resume-btn">Skills</button>
+                <button style="--i:4" class="resume-btn">About Me</button>
+            </div>
+
+            <div class="resume-box">
+                <div class="resume-datail experience active">
+                    <h2 class="heading">My <span>Experience</span></h2>
+                    <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem eos accusantium tempora ullam expedita possimus error neque officia, autem corporis.</p>
+                    <div class="resume-list">
+                        <div style="--i:1" class="resume-item">
+                            <p class="year">2023 - present</p>
+                            <h3>Frontend Developer</h3>
+                            <p class="company">DAF Corp.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, fugiat?</p>
+                        </div>
+                        <div style="--i:2" class="resume-item">
+                            <p class="year">2022 - 2023</p>
+                            <h3>Full Stack Developer</h3>
+                            <p class="company">Google</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, fugiat?</p>
+                        </div>
+                        <div style="--i:3" class="resume-item">
+                            <p class="year">2021 - 2022</p>
+                            <h3>Backend Developer</h3>
+                            <p class="company">YouTube</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, fugiat?</p>
+                        </div>
+                        <div style="--i:4" class="resume-item">
+                            <p class="year">2020 - 2021</p>
+                            <h3>Frontend Developer</h3>
+                            <p class="company">Toji Corp.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, fugiat?</p>
+                        </div>
+                        <div style="--i:5" class="resume-item">
+                            <p class="year">2019 - 2020</p>
+                            <h3>UI/UX Designer</h3>
+                            <p class="company">Dagi Corp.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, fugiat?</p>
+                        </div>
+                        <div style="--i:6" class="resume-item">
+                            <p class="year">2018 - 2019</p>
+                            <h3>Junior Developer</h3>
+                            <p class="company">DAF Corp.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, fugiat?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="resume-datail education">
+                    <h2 class="heading">My <span>Education</span></h2>
+                    <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem eos accusantium tempora ullam expedita possimus error neque officia, autem corporis.</p>
+                    <div class="resume-list">
+                        <div style="--i:1" class="resume-item">
+                            <p class="year">2024</p>
+                            <h3>Programming Course</h3>
+                            <p class="company">Online Course</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, distinctio.</p>
+                        </div>
+                        <div style="--i:2" class="resume-item">
+                            <p class="year">2022 - 2023</p>
+                            <h3>Web Development Bootcamp</h3>
+                            <p class="company">Online Course Platform</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, distinctio.</p>
+                        </div>
+                        <div style="--i:3" class="resume-item">
+                            <p class="year">2020</p>
+                            <h3>Certified Web Development</h3>
+                            <p class="company">Online Course</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, distinctio.</p>
+                        </div>
+                        <div style="--i:4" class="resume-item">
+                            <p class="year">2017 - 2018</p>
+                            <h3>Doctor of Engineering</h3>
+                            <p class="company">ASTU University</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, distinctio.</p>
+                        </div>
+                        <div style="--i:5" class="resume-item">
+                            <p class="year">2015 - 2017</p>
+                            <h3>Master of Computer Science</h3>
+                            <p class="company">ASTU University</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, distinctio.</p>
+                        </div>
+                        <div style="--i:6" class="resume-item">
+                            <p class="year">2012 - 2015</p>
+                            <h3>Bachelor of Data Science Course</h3>
+                            <p class="company">ASTU University</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, distinctio.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="resume-datail skills">
+                    <h2 class="heading">My <span>Skills</span></h2>
+                    <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem eos accusantium tempora ullam expedita possimus error neque officia, autem corporis.</p>
+                    <div class="resume-list">
+                        <div style="--i:1" class="resume-item">
+                            <div class="skill-percentage">
+                                <i class="bx bxl-html5"></i>
+                                <div class="percent">95%</div>
+                            </div>
+                            
+                            <div class="meter" style="--p:95%;"></div>
+                            <span>HTML5</span>
+                        </div>
+                        <div style="--i:2" class="resume-item">
+                            <div class="skill-percentage">
+                                <i class="bx bxl-css3"></i>
+                                <div class="percent">90%</div>
+                            </div>
+                            <div class="meter" style="--p:90%;"></div>
+                            <span>CSS3</span>
+                        </div>
+                        <div style="--i:3" class="resume-item">
+                            <div class="skill-percentage">
+                                <i class="bx bxl-javascript"></i>
+                                <div class="percent">75%</div>
+                            </div>
+                            <div class="meter" style="--p:75%;"></div>
+                            <span>JavaScript</span>
+                        </div>
+                        <div style="--i:4" class="resume-item">
+                            <div class="skill-percentage">
+                                <i class="bx bxl-python"></i>
+                                <div class="percent">80%</div>
+                            </div>
+                            <div class="meter" style="--p:85%;"></div>
+                            <span>Python</span>
+                        </div>
+                        <div style="--i:5" class="resume-item">
+                            <div class="skill-percentage">
+                                <i class="bx bxl-vuejs"></i>
+                                <div class="percent">70%</div>
+                            </div>
+                            <div class="meter" style="--p:70%;"></div>
+                            <span>Vue.js</span>
+                        </div>
+                        <div style="--i:6" class="resume-item">
+                            <div class="skill-percentage">
+                                <i class="bx bxl-tailwind-css"></i>
+                                <div class="percent">80%</div>
+                            </div>
+                            <div class="meter" style="--p:80%;"></div>
+                            <span>Tailwind CSS</span>
+                        </div>
+                        <div style="--i:7" class="resume-item">
+                            <div class="skill-percentage">
+                                <i class="bx bxl-nodejs"></i>
+                                <div class="percent">68%</div>
+                            </div>
+                            <div class="meter" style="--p:68%;"></div>
+                            <span>Node.js</span>
+                        </div>
+                        <div style="--i:8" class="resume-item">
+                            <div class="skill-percentage">
+                                <i class="bx bxl-mongodb"></i>
+                                <div class="percent">86%</div>
+                            </div>
+                            <div class="meter" style="--p:86%;"></div>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="resume-datail about">
+                    <h2 class="heading">About <span>Me</span></h2>
+                    <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem eos accusantium tempora ullam expedita possimus error neque officia, autem corporis.</p>
+                    <div class="resume-list">
+                        <div style="--i:1" class="resume-item">
+                            <p>Name <span>Dagmawi Solomon</span></p>
+                        </div>
+                        <div style="--i:2" class="resume-item">
+                            <p>Gender <span>Male</span></p>
+                        </div>
+                        <div style="--i:3" class="resume-item">
+                            <p>Age <span>21 Years Old</span></p>
+                        </div>
+                        <div style="--i:4" class="resume-item">
+                            <p>Status <span>In Campus</span></p>
+                        </div>
+                        <div style="--i:5" class="resume-item">
+                            <p>City <span>Adama</span></p>
+                        </div>
+                        <div style="--i:6" class="resume-item">
+                            <p>Nationality <span>Ethiopian</span></p>
+                        </div>
+                        <div style="--i:7" class="resume-item">
+                            <p>Experience <span>6 Months</span></p>
+                        </div>
+                        <div style="--i:8" class="resume-item">
+                            <p>Remote <span>Available</span></p>
+                        </div>
+                        <div style="--i:9" class="resume-item">
+                            <p>Freelance <span>Available</span></p>
+                        </div>
+                        <div style="--i:10" class="resume-item">
+                            <p>Phone <span>(+251) 91 371 6993</span></p>
+                        </div>
+                        <div style="--i:11" class="resume-item">
+                            <p>Email <span>dagisolo1023@gmail.com</span></p>
+                        </div>
+                        <div style="--i:12" class="resume-item">
+                            <p>Language <span>English, Amharic</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project">
+
+    </section>
+    
+    <!-- Contact -->
+
+    <section class="contact ">
+        <div class="contact-container">
+            <div class="contact-box">
+                <h2>Let's Work Together</h2>
+                <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis voluptatum debitis, odio assumenda ex laboriosam earum quibusdam error recusandae amet?</p>
+                <div class="contact-detail">
+                    <i class="bx bxs-phone"></i>
+                    <div class="detail">
+                        <p>Phone</p>
+                        <p>(+251) 91 371 6993</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="bx bxs-envelope"></i>
+                    <div class="detail">
+                        <p>Email</p>
+                        <p>dagisolo1023@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="bx bxs-map"></i>
+                    <div class="detail">
+                        <p>Address</p>
+                        <p>Addis Ababa, Ethiopia</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-box">
+                <form action="">
+                    <h2 class="heading">Contact <span>Me!</span></h2>
+                    <div class="field-box">
+                        <input type="text" autocomplete="off" placeholder="Full Name" required>
+                        <input type="text" autocomplete="off" placeholder="Email Address" required>
+                        <input type="text" autocomplete="off" placeholder="Phone Number" required>
+                        <input type="text" autocomplete="off" placeholder="Email Subject" required>
+                        <textarea id="" autocomplete="off" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

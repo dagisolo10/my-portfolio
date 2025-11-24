@@ -1,0 +1,87 @@
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 2em;
+    padding: 0 5em;
+    margin-top: .75em;
+}
+
+.contact-container .contact-box:first-child {
+    align-self: center;
+}
+
+.contact-box h2 {
+    font-size: 2rem;
+}
+
+.contact-box p {
+    font-size: 1rem;
+}
+
+.contact-box .desc {
+    margin: 1em 0 1.5em;
+}
+
+.contact-box .contact-detail {
+    display: flex;
+    align-items: center;
+    margin: 1.25em 0;
+}
+
+.contact-box .contact-detail i {
+    display: inline-flex;
+    background: var(--secondary-bg-color);
+    color: var(--brand-color);
+    font-size: 1.5rem;
+    padding: .75em;
+    border-radius: .5em;
+    margin-right: 1em;
+}
+
+.contact-detail .detail p:first-child {
+    color: var(--brand-color);
+}
+
+.contact-box form {
+    background: var(--secondary-bg-color);
+    padding: 1em 2em;
+    border-radius: .5em;
+    text-align: center;
+}
+
+.contact-box .heading {
+    font-size: 1.5rem;
+    margin-bottom: .5em;
+}
+
+.contact-box .field-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+}
+
+.contact-box .field-box input,
+.contact-box .field-box textarea {
+    padding: .75em;
+    background: var(--bg-color);
+    border: .09em solid var(--bg-color);
+    border-radius: .5em;
+    color: var(--text-color);
+}
+
+.contact-box .field-box textarea {
+    grid-column: 1/ -1;
+    height: 10em;
+    resize: none;
+}
+
+
+.contact-box .field-box input:focus,
+.contact-box .field-box textarea:focus {
+    border-color: var(--brand-color);
+}
+
+.contact-box .btn {
+    margin-top: 2em;
+    cursor: pointer;
+}

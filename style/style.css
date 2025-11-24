@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: Poppins, sans-serif;
+}
+
+:root {
+    --bg-color: #00000f;
+    --secondary-bg-color: hsl(from var(--bg-color) h calc(s - 70) calc(l + 7));
+    --brand-color: #008cff;
+    --text-color: white;
+
+    --anchor-color: rgb(67, 60, 106);
+    --secondary-color: rgba(173, 216, 230, 0.884);
+
+    --button-color: white;
+}
+
+.dark {
+    --bg-color: hsl(0 0 80);
+    --secondary-bg-color: hsl(from var(--bg-color) h calc(s + 0) calc(l - 7));
+    --brand-color: #0066cc;
+    --text-color: #111;
+
+    --anchor-color: rgb(38, 80, 180);
+    --secondary-color: rgba(30, 30, 30, 0.75);
+
+    --button-color: #111;
+}
+
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: auto;
+}
+
+body {
+    color: var(--text-color);
+    background: rgb(255, 255, 255);
+    transition: .5s;
+    overflow: hidden;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.bars-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: -1;
+}
+
+.bars-box .bar {
+    flex: 1;
+    height: 100%;
+    background: var(--bg-color);
+    transform: translateY(-100%);
+
+    animation: hide-bars .5s ease-in-out forwards;
+    animation-delay: calc(.1s * var(--i));
+}
+
+.bars-box.active .bar {
+    animation: show-bars .5s ease-in-out forwards;
+    animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes show-bars {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes hide-bars {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+
+section {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 64px);
+    margin-top: 64px;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+
+}
+
+section.active {
+    visibility: visible;
+    overflow: auto;
+
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1.1s;
+}
+
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
+}

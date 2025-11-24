@@ -1,0 +1,298 @@
+.resume-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5em;
+    padding: .5em 5em;
+    margin-top: .5em;
+}
+
+.resume-box h2 {
+    font-size: 1.8rem;
+    opacity: 0;
+    animation: slideTop 1s .75s ease forwards;
+}
+
+.resume-box p {
+    font-size: .8rem;
+}
+
+.resume-box .desc {
+    margin: 2em 0 2.5em;
+    opacity: 0;
+    animation: slideRight 1s .75s ease forwards;
+}
+
+.resume-box .resume-btn {
+    width: 100%;
+    height: 3.5em;
+    background: var(--secondary-bg-color);
+    border: .2em solid var(--secondary-bg-color);
+    color: var(--text-color);
+    font-weight: 500;
+    margin-bottom: 1em;
+    border-radius: .5em;
+    cursor: pointer;
+    transition: .5s ease;
+
+    opacity: 0;
+
+    animation: slideBottom .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.resume-box .resume-btn:hover {
+    background: hsl(from var(--secondary-bg-color) h s calc(l + 10));
+}
+
+.resume-box .resume-btn.active {
+    border-color: var(--brand-color);
+    color: var(--brand-color);
+}
+
+.resume-box .heading {
+    text-align: left;
+}
+
+.resume-datail {
+    display: none;
+}
+
+.resume-datail.active {
+    display: block;
+}
+
+.resume-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .75em;
+    height: 320px;
+    overflow: auto;
+}
+
+.resume-list::-webkit-scrollbar {
+    width: .2em;
+    height: 0;
+    opacity: 0;
+}
+
+.resume-list::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    border-radius: 1em;
+    background: transparent;
+
+}
+.resume-list:hover::-webkit-scrollbar-thumb {
+    background: var(--brand-color);
+}
+
+@keyframes thumb {
+    to{opacity: 1;}
+}
+
+.resume-list .resume-item {
+    background-color: var(--secondary-bg-color);
+    border-radius: .5em;
+    border: 2px solid transparent;
+    padding: 1em;
+    height: calc((auto) / 2);
+    display: flex;
+    flex-direction: column;
+    justify-content: safe;
+    transition: .5s ease-in-out;
+    opacity: 0;
+    position: relative;
+
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.3s * var(--i));
+}
+
+.resume-list .resume-item::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 0%;
+    translate: 0% -50%;
+    scale: 0 1;
+    background: hsl(from var(--secondary-bg-color) h s calc(l + 10) / .25);
+    transition: 1s ease;
+    border-radius: inherit;
+    transform-origin: left;
+}
+
+.resume-list .resume-item:hover::before {
+    scale: 1 1;
+}
+
+.resume-list .resume-item:hover {
+    border-color: var(--brand-color);
+}
+
+.resume-item .year {
+    color: var(--brand-color);
+}
+
+.resume-item h3 {
+    font-size: .9rem;
+}
+
+.resume-item .company {
+    position: relative;
+    font-size: .75rem;
+    margin-left: 2em;
+    margin-bottom: 2em;
+}
+
+.resume-item p {
+    font-size: .7rem;
+}
+
+.resume-item .company::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: .5em;
+    background: var(--brand-color);
+    border-radius: 50%;
+    margin-left: -2em;
+}
+
+.resume-datail.skills .resume-list {
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+    overflow: visible;
+}
+
+.resume-datail.skills .resume-item::before {
+    width: 0;
+    height: 0;
+}
+
+.resume-datail.skills .resume-item {
+    position: relative;
+    align-items: start;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: .25em;
+    padding: .75em 1em;
+
+    opacity: 0;
+    animation: slideRight .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.resume-datail.skills .resume-item .skill-percentage {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.resume-datail.skills .resume-item .skill-percentage .percent {
+    font-size: .8rem;
+    color: var(--brand-color);
+}
+
+.resume-datail.skills .resume-item .meter {
+    width: 100%;
+    height: .75em;
+    border-radius: .2em;
+    border: 2px solid var(--brand-color);
+    position: relative;
+}
+
+@keyframes fillUp {
+    100% {
+        scale: 1 1;
+    }
+}
+
+.resume-datail.skills .resume-item .meter::after {
+    content: '';
+    width: var(--p);
+    height: .25em;
+    border-radius: .1em;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    translate: .1em -50%;
+    background: var(--brand-color);
+
+    transform-origin: left;
+    scale: 0 1;
+    animation: fillUp 2.5s ease forwards;
+    animation-delay: calc(.3s * var(--i));
+}
+
+.resume-datail.skills .resume-item i {
+    font-size: 1.5rem;
+    transition: .5s;
+}
+
+.resume-datail.skills .resume-item:hover i {
+    color: var(--brand-color);
+}
+
+.resume-datail.skills .resume-item span {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    translate: -50% 0;
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: .2em 1em;
+    border-radius: .5em;
+    pointer-events: none;
+    opacity: 0;
+    scale: .9;
+    rotate: -60deg;
+    transition: .3s;
+}
+
+.resume-datail.skills .resume-item:hover span {
+    rotate: 0deg;
+    top: -25%;
+    opacity: 1;
+    scale: 1;
+}
+
+.resume-datail.about .resume-list {
+    height: auto;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.resume-datail.about .resume-item {
+    height: auto;
+    padding: .2em;
+    border-color: transparent;
+    background: transparent;
+
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: calc(.1s * var(--i));
+}
+
+.resume-datail.about .resume-item::before {
+    width: 0;
+    height: 0;
+}
+
+.resume-datail.about .resume-item p {
+    font-size: .75rem;
+    color: var(--brand-color);
+}
+
+.resume-datail.about .resume-item p span {
+    color: var(--text-color);
+    margin-left: 1em;
+    font-size: .8rem;
+}
+
+@keyframes showScrollbar {
+    to {
+        opacity: 1;
+    }
+}

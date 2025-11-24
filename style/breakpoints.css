@@ -1,0 +1,264 @@
+@media (max-width: 1024px) {
+    html {
+        font-size: 80%;
+    }
+
+    .home-img img {
+        max-width: 300px;
+    }
+
+    .resume-box .resume-btn {
+        font-size: .85rem;
+    }
+
+    .resume-list {
+        max-height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    header .top-bar {
+        display: none;
+    }
+
+    header .side-bar {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        top: 0%;
+        left: 0;
+        translate: 0 -100%;
+        transition: .5s ease;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        background: hsl(from var(--bg-color) h s l / .95);
+        z-index: 2;
+        padding: 1em 0;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .home-content {
+        max-width: 400px;
+    }
+
+    .home-img img {
+        max-width: 200px;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+        overflow: auto;
+        padding: 2em 3em;
+    }
+
+    .resume-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .resume-datail.skills .resume-list {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 1em 0;
+        height: 320px;
+        overflow: auto;
+    }
+
+    .resume-datail.skills .resume-item .skill-percentage .percent {
+        font-size: 1rem;
+    }
+
+    .resume-datail.skills .resume-item .skill-percentage i {
+        font-size: 2rem;
+    }
+
+    .resume-datail.about .resume-list {
+        height: auto;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .contact-box .field-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5em;
+    }
+
+    .contact-box p {
+        font-size: .75rem;
+    }
+
+    .contact-box .btn {
+        padding: .5em 1em;
+        margin-top: 1em;
+        cursor: pointer;
+    }
+
+    .contact-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-box .contact-detail i {
+        font-size: 1rem;
+    }
+
+    .contact-box .field-box input,
+    .contact-box .field-box textarea {
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 426px) {
+    html {
+        font-size: 70%;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .home {
+        align-items: center;
+        flex-direction: column-reverse;
+        margin-top: 44px;
+        height: calc(100vh - 64px);
+        padding: 1em 0;
+    }
+
+    .home-content {
+        text-align: center;
+    }
+
+    .home-img img {
+        align-self: center;
+        max-width: 120px;
+        animation-duration: 0s;
+    }
+
+    .home-content h3:nth-of-type(2) {
+        margin-bottom: 1em;
+        font-size: 1.5rem;
+    }
+
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-content p {
+        font-size: 1rem;
+        width: 50ch;
+    }
+
+    .home .btn {
+        padding: .5em 1em;
+    }
+
+    .social-media {
+        justify-content: center;
+    }
+
+    .social-media a {
+        align-self: center;
+        width: 25px;
+        height: 25px;
+    }
+
+    .services-container {
+        overflow-y: auto;
+        height: 350px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .services::-webkit-scrollbar {
+        width: .2em;
+    }
+
+    .services::-webkit-scrollbar-thumb {
+        cursor: pointer;
+        background: var(--brand-color);
+        border-radius: 1em;
+    }
+
+    .services-box p {
+        font-size: 1rem;
+    }
+
+    .resume::-webkit-scrollbar {
+        width: .2em;
+    }
+
+    .resume::-webkit-scrollbar-thumb {
+        cursor: pointer;
+        border-radius: 1em;
+        background: var(--brand-color);
+    }
+
+    .resume-container {
+        grid-template-columns: 1fr;
+        gap: 2em;
+        padding: 1em 5em;
+    }
+
+    .resume-box:first-child p,
+    .resume-box:nth-child(2) p {
+        font-size: 1rem;
+    }
+
+    .resume-datail.about .resume-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .resume-datail.about .resume-item p span {
+        font-size: 1rem;
+    }
+
+    .resume-datail.about .resume-item p {
+        font-size: 1rem;
+        color: var(--brand-color);
+    }
+
+    .resume-datail.about .resume-list::-webkit-scrollbar {
+        width: .2em;
+    }
+
+    .resume-datail.about .resume-list::-webkit-scrollbar-thumb {
+        cursor: pointer;
+        border-radius: 1em;
+        background: var(--brand-color);
+    }
+
+    .contact::-webkit-scrollbar {
+        width: .2em;
+    }
+
+    .contact::-webkit-scrollbar-thumb {
+        cursor: pointer;
+        border-radius: 1em;
+        background: var(--brand-color);
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        padding: 2em 5em;
+    }
+
+    .contact-box p {
+        font-size: 1rem;
+    }
+
+    .contact-box .field-box {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5em;
+    }
+
+    .contact-box .btn {
+        font-size: .9rem;
+        padding: .75em 2em;
+        margin-top: 1em;
+        margin-bottom: 0em;
+        cursor: pointer;
+    }
+}
