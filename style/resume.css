@@ -12,11 +12,8 @@
     animation: slideTop 1s .75s ease forwards;
 }
 
-.resume-box p {
-    font-size: .8rem;
-}
-
 .resume-box .desc {
+    font-size: .8rem;
     margin: 2em 0 2.5em;
     opacity: 0;
     animation: slideRight 1s .75s ease forwards;
@@ -81,18 +78,20 @@
     background: transparent;
 
 }
+
 .resume-list:hover::-webkit-scrollbar-thumb {
     background: var(--brand-color);
 }
 
 @keyframes thumb {
-    to{opacity: 1;}
+    to {
+        opacity: 1;
+    }
 }
 
 .resume-list .resume-item {
     display: grid;
     position: relative;
-    height: calc((auto) / 2);
     grid-template-rows: .75fr 1.25fr 1.25fr .75fr;
     padding: 1em;
     border-radius: .5em;
@@ -159,22 +158,20 @@
 }
 
 .resume-datail.skills .resume-list {
-    grid-template-columns: repeat(2, 1fr);
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 0em 0;
     overflow: visible;
-}
-
-.resume-datail.skills .resume-item::before {
-    width: 0;
-    height: 0;
+    /* background-color: red; */
 }
 
 .resume-datail.skills .resume-item {
-    position: relative;
-    align-items: start;
-    height: auto;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    width: 70%;
+    position: relative;
     gap: .25em;
     padding: .75em 1em;
 
@@ -192,6 +189,11 @@
 .resume-datail.skills .resume-item .skill-percentage .percent {
     font-size: .8rem;
     color: var(--brand-color);
+}
+
+.resume-datail.skills .resume-item i {
+    font-size: 1.5rem;
+    transition: .5s;
 }
 
 .resume-datail.skills .resume-item .meter {
@@ -225,10 +227,6 @@
     animation-delay: calc(.3s * var(--i));
 }
 
-.resume-datail.skills .resume-item i {
-    font-size: 1.5rem;
-    transition: .5s;
-}
 
 .resume-datail.skills .resume-item:hover i {
     color: var(--brand-color);
@@ -245,7 +243,7 @@
     border-radius: .5em;
     pointer-events: none;
     opacity: 0;
-    scale: .9;
+    scale: 0;
     rotate: -60deg;
     transition: .3s;
 }
@@ -258,13 +256,12 @@
 }
 
 .resume-datail.about .resume-list {
-    height: auto;
     grid-template-columns: repeat(3, 1fr);
 }
 
-.resume-datail.about .resume-item {
-    grid-template-rows: 1fr;
-    height: auto;
+.resume-datail.about .resume-list .resume-item {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     padding: .2em;
     border-color: transparent;
     background: transparent;
@@ -272,11 +269,6 @@
     opacity: 0;
     animation: slideRight 1s ease forwards;
     animation-delay: calc(.1s * var(--i));
-}
-
-.resume-datail.about .resume-item::before {
-    width: 0;
-    height: 0;
 }
 
 .resume-datail.about .resume-item p {

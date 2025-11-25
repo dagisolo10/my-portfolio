@@ -68,34 +68,38 @@
         background: var(--brand-color);
     }
 
+    .resume-container {
+        grid-template-columns: 1fr 1.25fr;
+    }
+
     .resume-list {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
     }
 
     .resume-list .resume-item {
         grid-template-rows: .5fr 1fr .5fr .5fr;
-
     }
 
-    .resume-datail.skills .resume-list {
-        grid-template-columns: repeat(1, 1fr);
-        padding: 1em 0;
-        height: 320px;
-        overflow: auto;
-    }
-
-    .resume-datail.skills .resume-item .skill-percentage .percent {
+    .resume-datail.skills .resume-item .percent {
         font-size: 1rem;
     }
 
-    .resume-datail.skills .resume-item .skill-percentage i {
+    .resume-datail.skills .resume-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: .5em;
+    }
+
+    .resume-datail.skills .resume-list .resume-item {
+        width: 100%;
+    }
+
+    .resume-datail.skills .resume-item i {
         font-size: 2rem;
     }
 
     .resume-datail.about .resume-list {
-        height: auto;
         grid-template-columns: repeat(2, 1fr);
-
     }
 
     .contact-box .field-box {
@@ -209,6 +213,11 @@
         padding: 1em 5em;
     }
 
+    .resume-list {
+        height: auto;
+        overflow: visible;
+    }
+
     .resume-list .resume-item {
         grid-template-rows: .5fr .5fr .4fr .5fr;
 
@@ -224,7 +233,9 @@
     }
 
     .resume-datail.about .resume-list {
+        margin-top: 2em;
         grid-template-columns: repeat(1, 1fr);
+        gap: 0em;
     }
 
     .resume-datail.about .resume-item p span {
