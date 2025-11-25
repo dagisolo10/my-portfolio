@@ -112,10 +112,6 @@
     color: var(--brand-color);
 }
 
-.services-box:hover .bx {
-    font-size: 2rem;
-}
-
 .services-box h3 {
     font-size: 1.5rem;
     margin: .5em 0 .5em 0;
