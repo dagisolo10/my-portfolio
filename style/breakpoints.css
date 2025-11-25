@@ -14,6 +14,10 @@
     .resume-list {
         max-height: 250px;
     }
+
+    .resume-container {
+        padding: .5em 4em;
+    }
 }
 
 @media (max-width: 768px) {
@@ -52,19 +56,25 @@
     .services-container {
         grid-template-columns: repeat(2, 1fr);
         overflow: auto;
+        height: 350px;
         padding: 2em 3em;
     }
 
-    .services::-webkit-scrollbar {
+    .services-container::-webkit-scrollbar {
         width: .2em;
     }
 
-    .services:hover::-webkit-scrollbar-thumb {
+    .services-container::-webkit-scrollbar-thumb {
         background: var(--brand-color);
     }
 
     .resume-list {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .resume-list .resume-item {
+        grid-template-rows: .5fr 1fr .5fr .5fr;
+
     }
 
     .resume-datail.skills .resume-list {
@@ -179,16 +189,6 @@
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .services::-webkit-scrollbar {
-        width: .2em;
-    }
-
-    .services::-webkit-scrollbar-thumb {
-        cursor: pointer;
-        background: var(--brand-color);
-        border-radius: 1em;
-    }
-
     .services-box p {
         font-size: 1rem;
     }
@@ -207,6 +207,15 @@
         grid-template-columns: 1fr;
         gap: 2em;
         padding: 1em 5em;
+    }
+
+    .resume-list .resume-item {
+        grid-template-rows: .5fr .5fr .4fr .5fr;
+
+    }
+
+    .resume-list .resume-item h3 {
+        font-size: 1rem;
     }
 
     .resume-box:first-child p,

@@ -90,17 +90,16 @@
 }
 
 .resume-list .resume-item {
-    background-color: var(--secondary-bg-color);
+    display: grid;
+    position: relative;
+    height: calc((auto) / 2);
+    grid-template-rows: .75fr 1.25fr 1.25fr .75fr;
+    padding: 1em;
     border-radius: .5em;
     border: 2px solid transparent;
-    padding: 1em;
-    height: calc((auto) / 2);
-    display: flex;
-    flex-direction: column;
-    justify-content: safe;
+    background-color: var(--secondary-bg-color);
     transition: .5s ease-in-out;
     opacity: 0;
-    position: relative;
 
     animation: slideTop 1s ease forwards;
     animation-delay: calc(.3s * var(--i));
@@ -134,7 +133,7 @@
 }
 
 .resume-item h3 {
-    font-size: .9rem;
+    font-size: .8rem;
 }
 
 .resume-item .company {
@@ -261,10 +260,10 @@
 .resume-datail.about .resume-list {
     height: auto;
     grid-template-columns: repeat(3, 1fr);
-
 }
 
 .resume-datail.about .resume-item {
+    grid-template-rows: 1fr;
     height: auto;
     padding: .2em;
     border-color: transparent;
