@@ -55,6 +55,14 @@
         padding: 2em 3em;
     }
 
+    .services::-webkit-scrollbar {
+        width: .2em;
+    }
+
+    .services:hover::-webkit-scrollbar-thumb {
+        background: var(--brand-color);
+    }
+
     .resume-list {
         grid-template-columns: repeat(1, 1fr);
     }

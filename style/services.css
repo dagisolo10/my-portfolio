@@ -14,7 +14,6 @@
 .services-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 180px);
     gap: 1em;
     padding: 1em 3em;
 
@@ -72,44 +71,9 @@
     animation-delay: calc(.5s * var(--i));
 }
 
-.services-box .icon {
-    display: flex;
-    justify-content: space-between;
-}
-
-.icon-wrapper {
-    display: flex;
-    width: 30px;
-    height: 30px;
-    justify-content: center;
-    align-items: center;
-    padding: .2em;
-    background: white;
-    border-radius: 50%;
-}
-
-.services-box .icon-wrapper .fa-solid {
-    font-size: 1rem;
-    color: var(--bg-color);
-    rotate: 45deg;
-}
-
-.icon-wrapper:hover {
-    background: var(--brand-color);
-}
-
-.icon-wrapper:hover .fa-arrow-right {
-    color: white;
-    rotate: 0deg;
-}
-
-.services-box .icon i {
+.services-box i {
     font-size: 1.5rem;
     transition: .5s;
-}
-
-.services-box:hover .fa-brands {
-    color: var(--brand-color);
 }
 
 .services-box h3 {
@@ -124,6 +88,7 @@
 
 .services-box p {
     font-size: .8rem;
+    margin-top: 2em;
 }
 
 @keyframes slideRight {
