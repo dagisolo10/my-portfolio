@@ -14,6 +14,7 @@
 .services-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 180px);
     gap: 1em;
     padding: 1em 3em;
 
@@ -30,6 +31,7 @@
     cursor: default;
     position: relative;
     opacity: 0;
+    box-sizing: content-box;
 }
 
 .services-container .services-box::before {
@@ -108,6 +110,10 @@
 
 .services-box:hover .fa-brands {
     color: var(--brand-color);
+}
+
+.services-box:hover .bx {
+    font-size: 2rem;
 }
 
 .services-box h3 {
