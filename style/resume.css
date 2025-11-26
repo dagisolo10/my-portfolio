@@ -257,12 +257,14 @@
 
 .resume-datail.about .resume-list {
     grid-template-columns: repeat(3, 1fr);
+    height: auto;
+    overflow: visible;
 }
 
 .resume-datail.about .resume-list .resume-item {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    padding: .2em;
+    padding: .1em;
     border-color: transparent;
     background: transparent;
 

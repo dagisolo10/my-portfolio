@@ -104,7 +104,6 @@ section {
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
-
 }
 
 section.active {

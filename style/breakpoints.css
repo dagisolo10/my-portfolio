@@ -41,8 +41,16 @@
         padding: 1em 0;
     }
 
+    header .side-bar a {
+        font-size: 1.5rem;
+    }
+
     #menu-icon {
         display: block;
+    }
+
+    .home h1 {
+        font-size: 2rem;
     }
 
     .home-content {
@@ -142,10 +150,12 @@
     }
 
     .home {
+        display: flex;
+        justify-content: flex-start;
+        background: red;
         align-items: center;
+        margin-top: 0;
         flex-direction: column-reverse;
-        margin-top: 44px;
-        height: calc(100vh - 64px);
         padding: 1em 0;
     }
 
@@ -188,8 +198,8 @@
     }
 
     .services-container {
-        overflow-y: auto;
-        height: 350px;
+        overflow-y: visible;
+        height: auto;
         grid-template-columns: repeat(1, 1fr);
     }
 
