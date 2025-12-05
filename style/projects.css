@@ -17,6 +17,22 @@
     gap: 3rem;
 }
 
+.projects::-webkit-scrollbar {
+    width: .2em;
+    height: 0;
+}
+
+.projects::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    border-radius: 1em;
+    background: transparent;
+
+}
+
+.projects:hover::-webkit-scrollbar-thumb {
+    background: var(--brand-color);
+}
+
 .project-card {
     display: flex;
     flex-direction: column;
