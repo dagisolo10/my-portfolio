@@ -26,8 +26,11 @@
     .home,
     .services,
     .contact {
-        height: auto;
-        /* let content dictate height */
+        min-height: auto;
+    }
+
+    section {
+        min-height: calc(100% - 128px);
     }
 
     header .top-bar {
