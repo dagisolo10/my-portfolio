@@ -1,10 +1,10 @@
-.projects {
+.project {
     padding: 5rem 10%;
     background: var(--bg);
     color: var(--text);
 }
 
-.projects .heading {
+.project .heading {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
@@ -17,19 +17,19 @@
     gap: 3rem;
 }
 
-.projects::-webkit-scrollbar {
+.project::-webkit-scrollbar {
     width: .2em;
     height: 0;
 }
 
-.projects::-webkit-scrollbar-thumb {
+.project::-webkit-scrollbar-thumb {
     cursor: pointer;
     border-radius: 1em;
     background: transparent;
 
 }
 
-.projects:hover::-webkit-scrollbar-thumb {
+.project:hover::-webkit-scrollbar-thumb {
     background: var(--brand-color);
 }
 
@@ -94,7 +94,7 @@
     color: hsl(0 0 80);
 }
 
-.projects .btn {
+.project .btn {
     border-radius: .3em;
     padding: .5em 1em;
     align-self: center;
