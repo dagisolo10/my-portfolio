@@ -267,11 +267,16 @@
     padding: .1em;
     border-color: transparent;
     background: transparent;
-
+    
     opacity: 0;
     animation: slideRight 1s ease forwards;
     animation-delay: calc(.1s * var(--i));
 }
+
+.resume-datail.about .resume-list .resume-item:hover::before {
+    scale: 0 1;
+}
+
 
 .resume-datail.about .resume-item p {
     font-size: .75rem;

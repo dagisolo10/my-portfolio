@@ -139,6 +139,10 @@
     .contact-box .field-box textarea {
         font-size: .8rem;
     }
+
+    .projects-grid {
+        grid-template-columns: 600px;
+    }
 }
 
 @media (max-width: 426px) {
@@ -299,4 +303,38 @@
         margin-bottom: 0em;
         cursor: pointer;
     }
+
+    .projects-grid {
+        grid-template-columns: 350px;
+    }
+
+    .projects .btn {
+        font-size: .8rem;
+        font-weight: 500;
+        margin: .5em 0 .5em 0;
+    }
+}
+
+@media (max-width: 376px) {
+
+    .projects-grid {
+        grid-template-columns: 300px;
+    }
+
+    .projects .btn {
+        border-radius: .3em;
+        padding: .5em 1em;
+        align-self: center;
+        font-size: .7rem;
+        font-weight: 500;
+    }
+
+}
+
+@media (max-width: 321px) {
+
+    .projects-grid {
+        grid-template-columns: 270px;
+    }
+
 }
