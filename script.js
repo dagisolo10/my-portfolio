@@ -163,3 +163,11 @@ cvButton.addEventListener('click', async () => {
         alert('Failed to download CV. Please try again.');
     }
 });
+
+const form = document.getElementById('contact-form')
+const inputs = document.getElementById('inputs')
+form.addEventListener('submit', () => {
+    inputs.forEach(input => {
+        input.value = ''
+    })
+})
