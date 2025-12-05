@@ -22,17 +22,6 @@
 
 @media (max-width: 768px) {
 
-    .resume,
-    .home,
-    .services,
-    .contact {
-        min-height: auto;
-    }
-
-    section {
-        min-height: calc(100% - 128px);
-    }
-
     header .top-bar {
         display: none;
     }
@@ -155,6 +144,17 @@
 @media (max-width: 426px) {
     html {
         font-size: 70%;
+    }
+
+    .resume,
+    .home,
+    .services,
+    .contact {
+        min-height: auto;
+    }
+
+    section {
+        min-height: calc(100% + 64px);
     }
 
     .logo {
