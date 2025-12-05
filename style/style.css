@@ -13,6 +13,7 @@
 
 :root {
     --bg-color: #00000f;
+    --bar-color: #00000f;
     --secondary-bg-color: hsl(from var(--bg-color) h calc(s - 70) calc(l + 7));
     --brand-color: #008cff;
     --text-color: white;
@@ -64,7 +65,7 @@ input[type="checkbox"] {
 .bars-box .bar {
     flex: 1;
     height: 100%;
-    background: var(--bg-color);
+    background: var(--bar-color);
     transform: translateY(-100%);
 
     animation: hide-bars .5s ease-in-out forwards;
@@ -100,7 +101,7 @@ input[type="checkbox"] {
 section {
     position: absolute;
     width: 100%;
-    min-height: calc(100% - 64px);
+    height: calc(100% - 64px);
     margin-top: 64px;
     opacity: 0;
     visibility: hidden;

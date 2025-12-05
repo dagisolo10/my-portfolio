@@ -14,7 +14,7 @@
 .services-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1em;
+    gap: .5em;
     padding: 1em 3em;
 
 }
@@ -51,7 +51,7 @@
 
 .services-box::before {
     background: radial-gradient(800px circle at var(--x) var(--y),
-            rgba(0, 0, 255, .2),
+            rgba(0, 0, 255, .4),
             transparent 30%);
     z-index: 3;
 }
