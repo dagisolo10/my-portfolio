@@ -53,8 +53,10 @@ const activePage = () => {
     sections.forEach(section => section.classList.remove('active'));
     barsBox.classList.remove('active');
     header.classList.remove('active');
-
+    
+    document.body.style.background = '#fff'
     setTimeout(() => barsBox.classList.add('active'), 1100);
+    setTimeout(() => document.body.style.background = '#00000f', 2100);
 };
 
 // Main nav link clicks (top + sidebar)
@@ -77,7 +79,6 @@ navLinks.forEach((link, idx) => {
 
             sidebar.style.translate = '0 -100%';
             overlay.style.display = 'none';
-            document.body.style.background = '--bg-color'
         }
     });
 });
@@ -93,6 +94,7 @@ sideLinks.forEach((link, idx) => {
             const targetId = sections[idx].id;
             history.replaceState(null, '', `#${targetId}`);
             
+            
             setTimeout(() => {
                 sections[idx].classList.add('active');
                 header.classList.add('active');
@@ -101,7 +103,6 @@ sideLinks.forEach((link, idx) => {
             sidebar.style.translate = '0 -100%';
             sidebar.classList.remove('open');
             overlay.style.display = 'none';
-            document.body.style.background = '--bg-color'
         }
     });
 });
@@ -113,13 +114,13 @@ logoLink.addEventListener('click', (e) => {
         activePage();
         sideLinks[0].classList.add('active');
         navLinks[0].classList.add('active');
+        
         setTimeout(() => {
             sections[0].classList.add('active');
             header.classList.add('active');
         }, 1100);
         sidebar.style.translate = '0 -100%';
         overlay.style.display = 'none';
-        document.body.style.background = '--bg-color'
     }
 });
 
