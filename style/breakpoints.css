@@ -146,12 +146,12 @@
         font-size: 70%;
     }
 
-    .resume,
+    /* .resume,
     .home,
     .services,
     .contact {
         min-height: auto;
-    }
+    } */
 
     section {
         min-height: calc(100% - 128px);
