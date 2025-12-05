@@ -99,7 +99,8 @@ input[type="checkbox"] {
 section {
     position: absolute;
     width: 100%;
-    height: calc(100% - 64px);
+    /* min-height: calc(100% - 64px); */
+    min-height: 100vh;
     margin-top: 64px;
     opacity: 0;
     visibility: hidden;

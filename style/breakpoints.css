@@ -21,6 +21,15 @@
 }
 
 @media (max-width: 768px) {
+
+    .resume,
+    .home,
+    .services,
+    .contact {
+        height: auto;
+        /* let content dictate height */
+    }
+
     header .top-bar {
         display: none;
     }
@@ -204,10 +213,6 @@
 
     .services-box p {
         font-size: 1rem;
-    }
-
-    .resume {
-        height: 100dvh;
     }
 
     .resume::-webkit-scrollbar {
