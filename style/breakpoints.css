@@ -154,6 +154,7 @@
         justify-content: flex-end;
         align-items: center;
         margin-top: 100px;
+        background-color: red;
         flex-direction: column-reverse;
         padding: 1em 0;
     }
