@@ -141,3 +141,25 @@ overlay.addEventListener('click', () => {
     sidebar.classList.remove('open');
     overlay.style.display = 'none';
 });
+
+
+const cvButton = document.getElementById('download-cv');
+cvButton.addEventListener('click', async () => {
+    const cvUrl = 'assets/Dagmawi CV.pdf'; // path to your PDF
+    const filename = 'Dagmawi_Solomon_Tilahun_CV.pdf';
+
+    try {
+        const response = await fetch(cvUrl);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const blob = await response.blob();
+        const link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+    } catch (err) {
+        console.error('Download failed', err);
+        alert('Failed to download CV. Please try again.');
+    }
+});
