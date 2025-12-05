@@ -77,6 +77,7 @@ navLinks.forEach((link, idx) => {
 
             sidebar.style.translate = '0 -100%';
             overlay.style.display = 'none';
+            document.body.style.background = '--bg-color'
         }
     });
 });
@@ -88,18 +89,19 @@ sideLinks.forEach((link, idx) => {
             activePage();
             link.classList.add('active');
             navLinks[idx].classList.add('active');
-
+            
             const targetId = sections[idx].id;
             history.replaceState(null, '', `#${targetId}`);
-
+            
             setTimeout(() => {
                 sections[idx].classList.add('active');
                 header.classList.add('active');
             }, 1100);
-
+            
             sidebar.style.translate = '0 -100%';
             sidebar.classList.remove('open');
             overlay.style.display = 'none';
+            document.body.style.background = '--bg-color'
         }
     });
 });
@@ -117,6 +119,7 @@ logoLink.addEventListener('click', (e) => {
         }, 1100);
         sidebar.style.translate = '0 -100%';
         overlay.style.display = 'none';
+        document.body.style.background = '--bg-color'
     }
 });
 
