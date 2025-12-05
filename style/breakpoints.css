@@ -154,8 +154,7 @@
     } */
 
     section {
-        min-height: 100%;
-        padding-bottom: 4em;
+        min-height: 120%;
     }
 
     .logo {
